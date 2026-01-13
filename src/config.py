@@ -61,7 +61,15 @@ CANDIDATE_FEATURES_HINT = [
 
 
 # --- Paths (relative to repo root) ---
-RAW_DATA_PATH = "data/raw/loan.csv"
-PROCESSED_DATA_DIR = "data/processed"
-FEATURE_DATA_PATH = f"{PROCESSED_DATA_DIR}/features.parquet"
-SPLIT_DATA_PATH = f"{PROCESSED_DATA_DIR}/splits.npz"
+# --- Paths (Colab + Google Drive friendly) ---
+# Set these in the notebook after mounting drive, if you want.
+DEFAULT_DRIVE_ROOT = "/content/drive/MyDrive"
+
+# Change these once you decide where the file lives in Drive:
+RAW_DATA_PATH = f"{DEFAULT_DRIVE_ROOT}/credit-risk/loan.csv"
+
+# Where to write processed artifacts (optional)
+PROCESSED_DATA_DIR = f"{DEFAULT_DRIVE_ROOT}/credit-risk/processed"
+TRAIN_PATH = f"{PROCESSED_DATA_DIR}/train.parquet"
+VAL_PATH   = f"{PROCESSED_DATA_DIR}/val.parquet"
+
