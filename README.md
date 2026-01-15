@@ -10,3 +10,5 @@ To reproduce results:
 1. Download Lending Club `loan.csv` from Kaggle
 2. Place file in Google Drive (or equivalent)
 3. Update `DATA_PATH` in notebooks
+
+Dataset source (Lending Club / Kaggle)
